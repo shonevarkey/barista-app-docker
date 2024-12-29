@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Reservation</title>
+    <!-- Include Google Fonts for Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="reservation-page">
+    <header>
+        <h1>Make a Reservation</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/reservation">Reservation</a>
+        </nav>
+    </header>
+
+    <main>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <form action="/reservation" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="date">Reservation Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Reservation Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="people">Number of People:</label>
+            <input type="number" id="people" name="people" min="1" required>
+
+            <button type="submit">Reserve</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Barista Coffee Shop</p>
+    </footer>
+</body>
+</html>
+

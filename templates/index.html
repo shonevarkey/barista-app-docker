@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barista Coffee Shop</title>
+    <!-- Include Google Fonts for Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Barista Coffee Shop</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/reservation">Reservation</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Enjoy our freshly brewed coffee!</h2>
+        <p>We offer a wide variety of coffee drinks, pastries, and more.</p>
+        <div class="gallery">
+            <img src="{{ url_for('static', filename='images/coffee1.jpg') }}" alt="Coffee 1">
+            <img src="{{ url_for('static', filename='images/coffee2.jpg') }}" alt="Coffee 2">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Barista Coffee Shop</p>
+    </footer>
+</body>
+</html>
+
