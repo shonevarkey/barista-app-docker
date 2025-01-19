@@ -41,13 +41,24 @@ barista-app-docker/
 
 ---
 
+## 📑 Table of Contents
+
+- 🛠️ Technologies Used
+- ⚙️ Setup Instructions
+- 🖥️ Environment Variables
+- 🐳 Docker Deployment
+- 📚 Usage
+- 📸 Screenshots
+
+---
+
 ## 🛠️ Technologies Used
 
-- **Backend**: Flask (Python)
-- **Database**: MySQL
-- **Frontend**: HTML, CSS, JavaScript
-- **Styling Framework**: Custom CSS
-- **Containerization**: Docker
+- 🐍 **Backend**: Flask (Python)
+- 🗄️ **Database**: MySQL
+- 🎨 **Frontend**: HTML, CSS, JavaScript
+- ✨ **Styling Framework**: Custom CSS
+- 🐳 **Containerization**: Docker
 
 ---
 
@@ -119,6 +130,14 @@ python app.py
 
 ## 🖥️ Environment Variables
 
+| 🖥️ Variable     |📝 Description                |🔍 Example            |
+|--------------|----------------------------------|----------------------|
+| `DB_HOST`    | 🗄️ Database host                 | `localhost`          |
+| `DB_USER`    | 👤 Database user                 | `root`               |
+| `DB_PASSWORD`| 🔑 Database password             | `password123`        |
+| `DB_NAME`    | 📂 Name of the database          | `coffee_shop`        |
+| `SECRET_KEY` | 🔒 Secret key for Flask sessions | `your-secret-key`    |
+
 ---
 
 ## 🐳 Docker Deployment
@@ -155,11 +174,11 @@ docker run -d -p 5000:5000 --env-file .env coffee-shop
 
 ### Homepage
 
-![Home Page](./screenshots/homepage.jpg)
+![Home Page](./screenshots/homepage.png)
 
 ### Reservation Page
 
-![Reservation Page](./screenshots/reservation.jpg)
+![Reservation Page](./screenshots/reservation.png)
 
 ---
 
